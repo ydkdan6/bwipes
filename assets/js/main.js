@@ -13,3 +13,65 @@ window.addEventListener('load', function() {
         preloader.classList.add('hide');
     }, delayTime);
 });
+
+let actualPrice = 640;
+let deliveryPay = 1000;
+
+function onInputCount() {
+    const quantityInput = document.getElementById('quantity');
+    quantityInput.value = parseInt(quantityInput.value);
+    updateTotalPrice();
+}
+
+function increaseCount() {
+    const quantityInput = document.getElementById('quantity');
+    quantityInput.value = parseInt(quantityInput.value) ;
+    updateTotalPrice();
+}
+
+function decreaseCount() {
+    const quantityInput = document.getElementById('quantity');
+    quantityInput.value = parseInt(quantityInput.value); // Ensure quantity is not negative
+    updateTotalPrice();
+}
+
+function updateTotalPrice() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const totalPrice = actualPrice * quantity;
+    document.getElementById('subTotal').textContent = "#" + totalPrice;
+    document.getElementById('mainSubTotal').textContent = "#" + totalPrice;
+
+    const checkPay = document.getElementById('free-shipping');
+
+    if (checkPay.checked) {
+        const subTotalWithDelivery = totalPrice + deliveryPay;
+        document.getElementById('mainTotal').textContent = "#" + subTotalWithDelivery;
+    } else {
+        document.getElementById('mainTotal').textContent = "#" + totalPrice;
+    }
+}
+
+function checkPay() {
+    const checkPay = document.getElementById('free-shipping');
+    if (checkPay.checked) {
+        addDelivery();
+    } else {
+        updateTotalPrice();
+    }
+}
+
+function addDelivery() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const totalPrice = actualPrice * quantity;
+    const subTotalWithDelivery = totalPrice + deliveryPay;
+    document.getElementById('mainTotal').textContent = "#" + subTotalWithDelivery;
+}
+function freeDelivery() {
+    const checkPay = document.getElementById('free-shipping');
+    if(checkPay.checked) {
+        addDelivery()
+    }
+    else {
+        updateTotalPrice();
+    }
+}
