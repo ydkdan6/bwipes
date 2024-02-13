@@ -19024,42 +19024,42 @@ body .product-popup {
 /*---------------------------------
     My Account Page
 ----------------------------------*/
-.my-account .breadcrumb-nav {
+.dashboard .breadcrumb-nav {
   margin-bottom: 3.2rem;
 }
-.my-account .tab-vertical .nav {
+.dashboard .tab-vertical .nav {
   width: 24.41%;
   border: none;
 }
-.my-account .tab-content {
+.dashboard .tab-content {
   width: 75.59%;
   padding-left: 1.5rem;
   border: none;
 }
-.my-account .nav-link,
-.my-account .link-item {
+.dashboard .nav-link,
+.dashboard .link-item {
   margin-bottom: 0;
   padding: 1.7rem 0 1.6rem;
   font-size: 1.6rem;
   text-transform: none;
   border-bottom: 1px solid #eee;
 }
-.my-account .link-item {
+.dashboard .link-item {
   font-weight: 600;
   color: #333;
   line-height: 1;
 }
-.my-account .link-item a {
+.dashboard .link-item a {
   color: inherit;
 }
-.my-account .link-item:hover {
+.dashboard .link-item:hover {
   color: #336699;
 }
-.my-account .tab-pane p {
+.dashboard .tab-pane p {
   font-size: 1.4rem;
   line-height: 1.8;
 }
-.my-account .icon-box.text-center i {
+.dashboard .icon-box.text-center i {
   display: block;
   font-size: 6rem;
   color: #333;
@@ -19068,49 +19068,49 @@ body .product-popup {
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
-.my-account .text-center .icon-box-icon {
+.dashboard .text-center .icon-box-icon {
   margin-bottom: 1.9rem;
 }
-.my-account .icon-box.text-center:hover .icon-box-icon i {
+.dashboard .icon-box.text-center:hover .icon-box-icon i {
   color: #336699;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-.my-account .icon-box.text-center:hover p {
+.dashboard .icon-box.text-center:hover p {
   text-decoration: underline;
 }
-.my-account .icon-box.icon-box-side .icon-orders, .my-account .icon-box.icon-box-side .icon-map-marker {
+.dashboard .icon-box.icon-box-side .icon-orders, .dashboard .icon-box.icon-box-side .icon-map-marker {
   margin-right: 1rem;
 }
-.my-account .icon-box.icon-box-side .w-icon-download {
+.dashboard .icon-box.icon-box-side .w-icon-download {
   font-size: 2.4rem;
 }
-.my-account .icon-box.icon-box-side .icon-account {
+.dashboard .icon-box.icon-box-side .icon-account {
   margin-right: 0.8rem;
 }
-.my-account .form-control {
+.dashboard .form-control {
   -webkit-transition: border-color 0.4s;
   transition: border-color 0.4s;
 }
-.my-account .form-control:focus {
+.dashboard .form-control:focus {
   border-color: #336699;
 }
-.my-account .icon-box-light {
+.dashboard .icon-box-light {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-.my-account .icon-box-light i {
+.dashboard .icon-box-light i {
   font-size: 2.5rem;
   color: #999;
 }
-.my-account .icon-box-light .icon-box-title {
+.dashboard .icon-box-light .icon-box-title {
   font-size: 2rem;
 }
-.my-account .order:not(th) {
+.dashboard .order:not(th) {
   padding-top: 0.9rem;
 }
-.my-account .order:not(th) .order-table {
+.dashboard .order:not(th) .order-table {
   padding: 1.1rem 2.9rem 0;
 }
 
@@ -19270,7 +19270,7 @@ body .product-popup {
 }
 
 @media (max-width: 767px) {
-  .my-account .tab-vertical .nav-tabs, .my-account .tab-vertical .tab-content {
+  .dashboard .tab-vertical .nav-tabs, .dashboard .tab-vertical .tab-content {
     width: 100%;
   }
 
