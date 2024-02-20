@@ -118,7 +118,7 @@
                                         <canvas class="signature" id="signatureCanvas" width="300" height="150" style="color: black; padding-top: 2rem;"></canvas>
                                         <small>Your Signature</small>
                                         <button id="clearButton">Clear Signature</button>
-                                        <button id="submitButton">Submit Signature</button>
+                                        <button id="submitButton" onclick="validClick()">Submit Signature</button>
                                     </div>
                                 </div>
                             </div>
@@ -186,11 +186,12 @@ function validClick() {
 
         if (isSigned) {
            
-            alert("Signature submitted successfully!"); // Replace this with actual submission code
+            alert("Signature submitted successfully!"); // 
             popup.style.display = 'none'; // Close the popup
             window.location.href= "register-distributor.html";
         } else {
             alert("Please sign the agreement.");
+            window.location.href = "hello.html";
         }
     }
 }
