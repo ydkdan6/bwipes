@@ -75,3 +75,30 @@ function freeDelivery() {
         updateTotalPrice();
     }
 }
+
+//Product Subscription Notification Auth
+function notifyWithSelectedValues() {
+    // Get the selected pack size
+    var p = document.querySelector('select[name="packsize"]').value;
+    // Get the subscription plan
+    var plan = document.querySelector('select[name="plan"]').value;
+    // Get the entered quantity
+    var q = document.querySelector('input[name="qty"]').value;
+    
+    // Call notifySubscriber() with the selected values
+    notifySubscriber(p, plan, q);
+}
+
+function notifySubscriber(p, plan, q) {
+    Notification.requestPermission().then(function(permission){
+        if(permission === "granted") {
+            var notification = new Notification('CheriX Subscription Confirmation', {
+                body: "You have subscribed to the "+ plan +" " + "With total: " + q + " " + "and price of: " + p,
+            });
+
+            notification.onclick = function(event){
+                alert("Notificcation Clicked!");
+            }
+        }
+    });
+}

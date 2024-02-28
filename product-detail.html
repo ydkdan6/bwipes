@@ -380,6 +380,11 @@
                                                     <span>Add to Cart</span>
                                                 </button></a>
                                             </div>
+                                            <div class="product-form container">
+                                                <a href="#card-header">
+                                                <button class="btn btn-primary"><i class="w-icon-cart"></i> &nbsp; Get Subscription</button>    
+                                            </a>
+                                            </div>
                                         </div>
 
                                         <div class="social-links-wrapper">
@@ -398,6 +403,57 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-bg accordion-gutter-md accordion-border ">
+                                <div class="card">
+                                    <div class="card-header" id="card-header">
+                                        <a href="#collapse5-1" class="collapse">Weekly Subcription Plan</a>
+                                    </div>
+                                    <div class="card-body expanded" id="collapse5-1">
+                                        <p class="mb-0">
+                                            Fringilla urna porttitor rhoncus dolor purus. Luctus venenatis rhoncus
+                                            dolor lectus
+                                            Diam maecenas ultricies mi eget mauris. Nibh tellus rhoncus
+                                            dolormolestie nunc
+                                            Ultrices eros in cursus rhoncus dolorturpis massa tincidunt. Ante in
+                                            nibh mauri
+                                            lectus. iam non quam lacus suspendisse faucibus.
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Select Subscription Plan: </label>
+                                                    <div class="select-box">
+                                                        <select name="plan" class="form-control form-control-md">
+                                                            <option value="default" selected="selected">Select</option>
+                                                            <option value="Weekly Plan">Weekly Plan</option>
+                                                            <option value="Monthly Plan">Monthly Plan</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Select Pack Size: </label>
+                                                    <div class="select-box">
+                                                        <select name="packsize" class="form-control form-control-md">
+                                                            <option value="default" selected="selected">120Pcs</option>
+                                                            <option value="120pcs">120Pcs</option>
+                                                            <option value="80pcs">80Pcs</option>
+                                                            <option value="12pcs">12Pcs</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Enter Quantity</label>
+                                                <input type="number" style="color: black;" class="form-control form-control-md" name="qty" required>
+                                            </div>
+                                            <div class="product-form container mt-4 ml-0">
+                                                
+                                                <button class="btn btn-primary" onclick="notifyWithSelectedValues()"><i class="w-icon-cart"></i> &nbsp;Subscribe</button>    
+                                            </div>
+                                        </p>
+                                </div>
                                 </div>
                             </div>
                             <div class="tab tab-nav-boxed tab-nav-underline product-tabs">
@@ -1151,6 +1207,7 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/main.js" ></script>
 
     <!--Prealoder-->
     <script src="assets/js/main.js"></script>
