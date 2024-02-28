@@ -94,12 +94,48 @@ function notifySubscriber(p, plan, q) {
         if(permission === "granted") {
             var notification = new Notification('CheriX Subscription Confirmation', {
                 body: "You have subscribed to the "+ plan +" " + "With total: " + q + " " + "and price of: " + p,
-                icon: "assets/images/trans2.jpg"
+                icon: "assets/images/trans2.png"
             });
 
             notification.onclick = function(event){
-                alert("Notificcation Clicked!");
+                alert("Notification Clicked!");
+                window.location.href = "checkout.html"
             }
         }
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const packSizeSelect = document.querySelector('select[name="packsize"]');
+    const quantityInput = document.querySelector('input[name="qty"]');
+    const totalPriceSpan = document.querySelector('.subscribe-plan');
+
+    // Function to calculate and update the total price
+    function updateTotalPrice() {
+        const packSize = packSizeSelect.value;
+        const quantity = quantityInput.value;
+
+        // Define the price for each pack size
+        const prices = {
+            '120pcs': 600,
+            '80pcs': 500,
+            '12pcs': 400
+        };
+
+          // Calculate total price only when both pack size and quantity are selected
+          if (packSize in prices && quantity) {
+            const totalPrice = prices[packSize] * quantity;
+            totalPriceSpan.textContent = totalPrice;
+        } else {
+            totalPriceSpan.textContent = '0'; // Set total price to zero if pack size or quantity is not selected
+        }
+    }
+
+    // Add event listeners for changes in pack size and quantity
+    packSizeSelect.addEventListener('change', updateTotalPrice);
+    quantityInput.addEventListener('input', updateTotalPrice);
+
+    // Initialize total price on page load
+    updateTotalPrice();
+});
