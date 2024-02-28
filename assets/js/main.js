@@ -94,6 +94,7 @@ function notifySubscriber(p, plan, q) {
         if(permission === "granted") {
             var notification = new Notification('CheriX Subscription Confirmation', {
                 body: "You have subscribed to the "+ plan +" " + "With total: " + q + " " + "and price of: " + p,
+                icon: "assets/images/trans2.jpg"
             });
 
             notification.onclick = function(event){
