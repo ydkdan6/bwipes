@@ -90,20 +90,22 @@ function notifyWithSelectedValues() {
 }
 
 function notifySubscriber(p, plan, q) {
-    Notification.requestPermission().then(function(permission){
-        if(permission === "granted") {
+    Notification.requestPermission().then(function(permission) {
+        if (permission === "granted") {
             var notification = new Notification('CheriX Subscription Confirmation', {
-                body: "You have subscribed to the "+ plan +" " + "With total: " + q + " " + "and price of: " + p,
+                body: "You have subscribed to the " + plan + " with a total of " + q + " and a price of " + p,
                 icon: "assets/images/trans2.png"
             });
 
-            notification.onclick = function(event){
+            notification.onclick = function(event) {
                 alert("Notification Clicked!");
-                window.location.href = "checkout.html"
+                // Redirect to checkout.html when notification is clicked
+                window.location.href = "checkout.html";
             }
         }
     });
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
